@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hema Diaries | Beauty & Lifestyle</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fdeff9, #e1f5fe, #d4fcf9);
+            color: #5a4b4b;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffd1ff);
+            color: white;
+            padding: 60px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 80px 80px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 4.5rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+        .cta {
+            display: inline-block;
+            background: #ff758f;
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+            box-shadow: 0 8px 16px rgba(255, 117, 143, 0.4);
+        }
+        .cta:hover {
+            background: #ff4f72;
+            transform: translateY(-6px);
+        }
+        section {
+            padding: 80px 20px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .flip-card {
+            background-color: transparent;
+            width: 260px;
+            height: 340px;
+            perspective: 1300px;
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.7s;
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .flip-card-front {
+            background: linear-gradient(135deg, #fdeff9, #d4fcf9);
+            color: #ff4f72;
+        }
+        .flip-card-back {
+            background: #ff758f;
+            color: white;
+            transform: rotateY(180deg);
+        }
+        footer {
+            background: linear-gradient(135deg, #fdeff9, #d4fcf9);
+            padding: 35px;
+            margin-top: 50px;
+            font-size: 1.2rem;
+            border-radius: 80px 80px 0 0;
+        }
+        a {
+            color: #ff758f;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #e63950;
+        }
+        .instagram-widget {
+            margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            .flip-card {
+                width: 200px;
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hema Diaries</h1>
+        <p>Skincare | Haircare | Hauls | PR Collaborations</p>
+        <a href="#contact" class="cta">Work With Me</a>
+    </header>
+    
+    <section id="about">
+        <h2>About Hema Diaries</h2>
+        <p>Sharing my journey in skincare, haircare, and beauty hauls. Honest reviews, product insights, and self-care tips to keep you glowing! ✨</p>
+    </section>
+    
+    <section id="featured">
+        <h2>Featured Content</h2>
+        <div class="gallery">
+            <div class="flip-card" onclick="window.location.href='skinhair.html'">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">Skincare</div>
+                    <div class="flip-card-back">Top skincare tips and routines!</div>
+                </div>
+            </div>
+            <div class="flip-card" onclick="window.location.href='skinhair.html'">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">Haircare</div>
+                    <div class="flip-card-back">Best haircare products revealed!</div>
+                </div>
+            </div>
+            <div class="flip-card" onclick="window.location.href='prunboxing.html'">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">PR Unboxing</div>
+                    <div class="flip-card-back">Exclusive brand PR package reveals!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Let’s Connect</h2>
+        <p>Email: <a href="mailto:hemadiaries2005@gmail.com">hemadiaries2005@gmail.com</a></p>
+        <p>Follow me on Instagram: <a href="https://instagram.com/hema__diaries">@hemadiaries</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Hema Diaries. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
